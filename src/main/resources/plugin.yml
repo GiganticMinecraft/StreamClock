@@ -1,0 +1,4 @@
+name: StreamClock
+version: @version@
+main: net.unicroak.streamclock.StreamClock
+authors: [unicroak]
