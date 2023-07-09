@@ -1,10 +1,14 @@
-apply plugin: 'java'
+plugins {
+    id 'java'
+}
 
-group = pluginGroup
-version = pluginVersion
+group = plugin_group
+version = plugin_version
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+java {
+    sourceCompatibility = jvm_version
+    targetCompatibility = jvm_version
+}
 
 repositories {
     mavenCentral()
@@ -19,13 +23,15 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
+    testImplementation 'junit:junit:4.12'
+    implementation 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens
 
 processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+
     from(sourceSets.main.resources.srcDirs) {
         filter ReplaceTokens, tokens: [version: version]
     }
