@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
     testImplementation 'junit:junit:4.12'
-    implementation 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
+    implementation 'org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT'
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens
