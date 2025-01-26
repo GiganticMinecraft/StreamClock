@@ -14,7 +14,7 @@ repositories {
     mavenCentral()
     maven {
         name = 'papermc-repo'
-        url = '"https://repo.papermc.io/repository/maven-public/"'
+        url = 'https://repo.papermc.io/repository/maven-public/'
     }
     maven {
         name = 'sonatype'
@@ -23,7 +23,6 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.12'
     implementation 'io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT'
 }
 
