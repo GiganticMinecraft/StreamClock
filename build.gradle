@@ -13,8 +13,8 @@ java {
 repositories {
     mavenCentral()
     maven {
-        name = 'spigotmc-repo'
-        url = 'https://hub.spigotmc.org/nexus/content/groups/public/'
+        name = 'papermc-repo'
+        url = 'https://repo.papermc.io/repository/maven-public/'
     }
     maven {
         name = 'sonatype'
@@ -23,8 +23,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.12'
-    implementation 'org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT'
+    implementation 'io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT'
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens
